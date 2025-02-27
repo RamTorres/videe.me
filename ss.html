@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Video</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent scroll */
+        }
+        iframe {
+            width: 100vw;
+            height: 75vh;
+        }
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            background-color: black;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border-radius: 8px;
+        }
+        .popup a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="https://backstage.cam" allowfullscreen></iframe>
+
+    <div class="button-container">
+        <button class="btn" onclick="openInBackground('https://dailyviral.cloud/EeqoQ')">GroupChat1</button>
+        <button class="btn" onclick="openInBackground('https://dailyviral.cloud/EeqoQ')">GroupChat2</button>
+    </div>
+
+    <div class="popup" id="popupAd">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <p>🔥 More Videos! 🔥</p>
+        <a href="https://dailyviral.cloud/EeqoQ" target="_blank">Click Here for More!</a>
+    </div>
+
+    <script>
+        function openInBackground(url) {
+            window.location.href = url;
+        }
+
+        setTimeout(() => {
+            document.getElementById('popupAd').style.display = 'block';
+        }, 15000);
+
+        function closePopup() {
+            document.getElementById('popupAd').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
